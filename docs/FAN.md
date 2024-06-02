@@ -43,7 +43,7 @@ fan:
     power_sensor: binary_sensor.fan_power
 ```
 
-## Example (using mqtt/Z06/UFO-R11 controller)
+## Example (using mqtt controller)
 ```yaml
 fan:
   - platform: smartir
@@ -51,6 +51,17 @@ fan:
     unique_id: bedroom_fan
     device_code: 3000
     controller_data: home-assistant/bedroom-fan/command
+    power_sensor: binary_sensor.fan_power
+```
+
+## Example (using zigbee2mqtt Z06/UFO-R11 controller):
+```yaml
+fan:
+  - platform: smartir
+    name: Bedroom fan
+    unique_id: bedroom_fan
+    device_code: 3000
+    controller_data: zigbee2mqtt/bedroom-fan/set
     power_sensor: binary_sensor.fan_power
 ```
 

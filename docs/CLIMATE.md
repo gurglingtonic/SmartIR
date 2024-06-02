@@ -49,7 +49,7 @@ climate:
     power_sensor: binary_sensor.ac_power
 ```
 
-## Example (using mqtt/Z06/UFO-R11 controller):
+## Example (using mqtt controller):
 ```yaml
 climate:
   - platform: smartir
@@ -57,6 +57,20 @@ climate:
     unique_id: office_ac
     device_code: 3000
     controller_data: home-assistant/office-ac/command
+    temperature_sensor: sensor.temperature
+    humidity_sensor: sensor.humidity
+    power_sensor: binary_sensor.ac_power
+    power_sensor_restore_state: true
+```
+
+## Example (using zigbee2mqtt Z06/UFO-R11 controller):
+```yaml
+climate:
+  - platform: smartir
+    name: Office AC
+    unique_id: office_ac
+    device_code: 3000
+    controller_data: zigbee2mqtt/office_ac/set
     temperature_sensor: sensor.temperature
     humidity_sensor: sensor.humidity
     power_sensor: binary_sensor.ac_power

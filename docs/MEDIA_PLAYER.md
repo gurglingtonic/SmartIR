@@ -43,7 +43,7 @@ media_player:
     power_sensor: binary_sensor.tv_power
 ```
 
-## Example (using mqtt/Z06/UFO-R11 controller):
+## Example (using mqtt controller):
 ```yaml
 media_player:
   - platform: smartir
@@ -51,6 +51,17 @@ media_player:
     unique_id: living_room_tv
     device_code: 3000
     controller_data: home-assistant/living-room-tv/command
+    power_sensor: binary_sensor.tv_power
+```
+
+## Example (using zigbee2mqtt Z06/UFO-R11 controller):
+```yaml
+media_player:
+  - platform: smartir
+    name: Living room TV
+    unique_id: living_room_tv
+    device_code: 3000
+    controller_data: zigbee2mqtt/living-room-tv/set
     power_sensor: binary_sensor.tv_power
 ```
 
